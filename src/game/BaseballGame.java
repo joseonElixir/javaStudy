@@ -97,7 +97,7 @@ public class BaseballGame {
 		}//game for end
 		
 		
-		System.out.println("패배");
+		System.out.println("lose");
 		//10번 이내에 승리를 못할 경우 game for문을 빠져나와 패배가 출력된다. 
 
 	}// main end
