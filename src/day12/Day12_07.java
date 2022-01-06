@@ -45,7 +45,7 @@ public class Day12_07 {
 	throws IOException{
 		
 		int arr[] = arrInput();
-		
+		int num = 10;
 		arrPrint(arr);
 		arrSort(arr);
 		arrPrint(arr);

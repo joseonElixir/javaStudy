@@ -6,7 +6,7 @@ public class Bank {
 	int money ;
 	static double incm = 1.07; //스테틱변수(=클래스변수)는 선언과 동시에 초기화를 해준다.
 	
-	public Bank(){ //생성자 , 변칙메소드
+	public Bank(){ //생성자 , 변칙메소드. 멤버변수를 초기화하는 역할.
 		userName = "";
 		money = 0;
 		
