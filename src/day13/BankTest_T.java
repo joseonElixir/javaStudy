@@ -30,8 +30,9 @@ public class BankTest_T {
 		b2.getInfo();
 		System.out.println("-----------------------------");
 		
-		Bank_T.iyul = 0.2; // class이름으로 호출할 수 있다. 
+		Bank_T.iyul = 0.1; // class이름으로 호출할 수 있다. 
 		b1.getInfo();
+		//b2.money=10;//money의 접근 지정자가 private이기 때문에 호출하지 못한다.
 		b2.getInfo();
 		
 		System.out.println("프로그램 끝");

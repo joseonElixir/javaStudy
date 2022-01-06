@@ -5,7 +5,7 @@ public class Bank_T {
 	//속성 (멤버변수)
 	String acname; //멤버변수
 	String acnum;
-	int money;
+	private int money;
 	static double iyul = 0.07;; //static 변수 or class 변수 프로그램이 시작하는 시점에서 메모리에 올려둠.
 	//즉, 메소드가 만들어지기도 전에 메모리에 올라감.(단 1회) 
 	//그렇기 때문에 모든 객체들은 이 static 변수를 참조한다.

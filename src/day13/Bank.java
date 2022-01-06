@@ -3,7 +3,7 @@ package day13;
 public class Bank {
 	String userName; //멤버변수
 	int userNum;
-	int money ;
+	private int money ;
 	static double incm = 1.07; //스테틱변수(=클래스변수)는 선언과 동시에 초기화를 해준다.
 	
 	public Bank(){ //생성자 , 변칙메소드. 멤버변수를 초기화하는 역할.
@@ -14,7 +14,19 @@ public class Bank {
 	
 	//call by value.
 	//
-	public void getMoney(int getm) { 
+	//setter -- 반환 x 매개변수 o
+	
+	public void setMoney(int money) { 
+		this.money= money;
+	}
+	
+	//getter -- 반환 o 매개변수 x
+	public int getMoney() {
+		return this.money;
+	}
+	
+	
+	public void sBank(int getm) { 
 		// 모든 동작을 멤버변수가 받아서 처리하기 때문에 굳이 리턴값을 줄 필요 없다.
 		//쓸모도 없고.
 		System.out.println("----------------------");
@@ -26,7 +38,7 @@ public class Bank {
 		
 	}
 	
-	public void betMoney(int betm) {
+	public void lBank(int betm) {
 		System.out.println("----------------------");
 		if((money-betm)<0) {
 			System.out.println("잔액이 부족합니다");

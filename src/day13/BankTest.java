@@ -9,9 +9,9 @@ public class BankTest {
 		bn.userName="홍길동"; //멤버변수 호출
 		bn.userNum = 123456; 
 		bn.getInfo();
-		bn.getMoney(1000);//멤버메소드 호출
-		bn.betMoney(20000000);
-		bn.betMoney(20000);
+		bn.sBank(1000);//멤버메소드 호출
+		bn.lBank(20000000);
+		bn.lBank(20000);
 		bn.getInfo();
 		
 		
