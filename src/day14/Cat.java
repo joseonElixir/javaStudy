@@ -6,16 +6,16 @@ public class Cat {
 	int age;
 	String value;
 	
-	public Cat() {
+	public Cat() { // 일반 생성자( 변칙 메소드)
 		name="네로";
 		value = "코숏";
 	}
-	public Cat(String name) {
+	public Cat(String name) { //인자 생성자 (생성자 오버로딩)
 		this.name=name;
 		age = 1;
 		value = "코숏";
 	}
-	public Cat(String name, int age) {
+	public Cat(String name, int age) { 
 		this.name=name;
 		this.age=age;
 		value = "코숏";
