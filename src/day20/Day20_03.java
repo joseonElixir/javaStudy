@@ -59,7 +59,7 @@ public class Day20_03 {
 		
 		for(int i=0;i<arr.length;i++) {//arr에 저장된 비속어 갯수만큼 for문을 수행.
 			while(true) {
-			int os = sb.indexOf(arr[i]); // 비속어의 시작점index (offset index). 불필요하나 코드의 가시성을 위해 작성.		
+			int os = sb.indexOf(arr[i]); 	// 비속어의 시작점index (offset index). 불필요하나 코드의 가시성을 위해 작성.		
 			int len= arr[i].length();		//비속어 크기 (length). 역시 불필요하나 코드의 가시성을 위해 작성.
 				if(os!=-1) { 
 						// 비속어가 존재하지 않을 경우 os에 -1이 리턴되고 ArrayIndexOutOfBoundException이 발생한다.
