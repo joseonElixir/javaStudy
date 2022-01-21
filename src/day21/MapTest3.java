@@ -1,6 +1,8 @@
 package day21;
 
 import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class MapTest3 {
 
@@ -24,6 +26,16 @@ public class MapTest3 {
 		while(itr.hasNext()) {
 			String str = itr.next();
 			System.out.println("Key값:"+str+" 데이터:"+hm.get(str));
+		}
+		
+		System.out.println("=================================");
+		
+		//3
+		System.out.println("Object 배열로 Key값 추출하기.");
+		Object [] ob =hm.keySet().toArray();
+		
+		for(int i=0;i<ob.length;i++) {
+			System.out.println("키값:"+ob[i]+", 데이터:"+hm.get(ob[i]));
 		}
 		
 		

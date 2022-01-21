@@ -45,5 +45,4 @@ public class Day20_01_1 {
 		System.out.println(str);
 	}
 	
-
 }
