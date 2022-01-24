@@ -16,12 +16,13 @@ public class VectorTest {
 		 * */
 		
 		
-		
+		//벡터와 어레이리스트는 같다. 객체형태로 값을 저장하기 위해서임.
 		
 		Vector v = new Vector(3, 4); // 기본크기 3 부족하면 4씩 증가. 물론 이딴거 안씀.
 		//벡터는 기본생성자로 쓰는게 기본임.
 		System.out.println("v의 크기 :"+v.capacity()); // 카파시티 : 내 공간의 크기를 보여줌
-		//카파시티 == 랭스
+		//카파시티 == 랭스, 하지만 실제 정보가 담겨있지 않기 때문에 capacity를 총 크기로 잡고 for문을 돌려서
+		//출력을 하게 되면 ArrayIndexOutOfBoundEXception이 발생한다.
 		System.out.println("v의 실제 데이터 개수 : "+ v.size());
 		//size = 실 데이터가 들어가있는 공간의 갯수. 즉, 할당받은 공간 중 null이 아닌 것들의 합을 출력.
 		

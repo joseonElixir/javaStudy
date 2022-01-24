@@ -15,7 +15,7 @@ public class Room extends Frame implements ActionListener , WindowListener{
 	TextField tf_res, tf_cancel, tf_cancel_bot;
 
 	public Room() {
-
+		
 		hm_room = new HashMap<Integer, String>();
 		cb = new Checkbox[9];
 		int num = 100;
@@ -59,7 +59,6 @@ public class Room extends Frame implements ActionListener , WindowListener{
 	public void reserve() {
 		this.removeAll();
 		this.setLayout(new BorderLayout(30, 30));
-		this.validate();
 		Panel p_res = new Panel(new BorderLayout(30, 30));
 		this.add(p_res, BorderLayout.CENTER);
 		Label lb_res_title = new Label("방 예약하기", Label.CENTER);
@@ -141,7 +140,7 @@ public class Room extends Frame implements ActionListener , WindowListener{
 			for (int i = 0; i < cb.length; i++) {
 				if (cb[i].getState() == true) {
 					cb[i].setEnabled(false); // 비활성화
-					this.validate();
+					
 					hm_room.put((int) Integer.parseInt(cb[i].getLabel()), "예약됨");
 					tf_res.setText("예약완료");
 					cb[i].setState(false); //체크해제
@@ -162,7 +161,6 @@ public class Room extends Frame implements ActionListener , WindowListener{
 						if(cb[i].getLabel().equals(tf_cancel.getText())) {
 							cb[i].setEnabled(true);
 						}
-						
 					}
 				}else if (hm_room.get(cancelroom_info).equals("빈방")) {
 					tf_cancel_bot.setText("비어있는 방입니다.");
@@ -170,22 +168,19 @@ public class Room extends Frame implements ActionListener , WindowListener{
 			} catch (Exception ex) {
 				tf_cancel_bot.setText("방 정보를 찾을 수 없습니다");
 			}
-
 		}
 
 		if (obj == mi_reserve){
-
 			this.reserve();
-			this.validate();
-
-		} else if (obj == mi_exit) {
-			System.exit(0);
-		} else if (obj == mi_check) {
-			this.check();
 			this.validate();
 		} else if (obj == mi_cancel) {
 			this.cancel();
 			this.validate();
+		} else if (obj == mi_check) {
+			this.check();
+			this.validate();
+		} else if (obj == mi_exit) {
+			System.exit(0);
 		}
 
 	}
